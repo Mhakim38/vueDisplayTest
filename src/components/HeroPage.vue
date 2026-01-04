@@ -1,5 +1,5 @@
 <script setup>
-// No additional data needed for simplified hero page
+// Simplified hero component that displays only the company title with visual appeal
 </script>
 
 <template>
@@ -83,5 +83,12 @@
 
 .animate-pulse-slow {
   animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Respect user's motion preferences for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-slow {
+    animation: none;
+  }
 }
 </style>
