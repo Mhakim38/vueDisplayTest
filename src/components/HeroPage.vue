@@ -1,83 +1,20 @@
 <script setup>
-import { ref } from 'vue'
-
-const features = [
-  {
-    icon: 'fa-wifi',
-    title: 'High-Speed WiFi',
-    description: 'Stay connected with blazing fast internet',
-  },
-  {
-    icon: 'fa-mug-hot',
-    title: 'Premium Coffee',
-    description: 'Artisan coffee crafted with passion',
-  },
-  {
-    icon: 'fa-laptop-code',
-    title: 'Code-Friendly Space',
-    description: 'Perfect environment for developers',
-  },
-  {
-    icon: 'fa-clock',
-    title: 'Open Late',
-    description: 'Work on your projects anytime',
-  },
-]
+// Simplified hero component that displays only the company title with visual appeal
 </script>
 
 <template>
   <div class="relative min-h-screen">
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center px-4 pt-20">
-      <div class="max-w-7xl mx-auto w-full">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <!-- Left Content -->
-          <div class="text-left space-y-6 z-10">
-            <div class="inline-block">
-              <span class="px-4 py-2 bg-coffee-500/30 backdrop-blur-sm border border-coffee-400/30 rounded-full text-coffee-200 text-sm font-medium">
-                <i class="fas fa-star mr-2"></i>
-                Where Coffee Meets Code
-              </span>
-            </div>
-            
-            <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight">
-              Welcome to
-              <span class="block text-transparent bg-clip-text bg-gradient-to-r from-coffee-300 to-tech-blue-400">
-                Santai Kuppi
-              </span>
-            </h1>
-            
-            <p class="text-xl text-coffee-200 leading-relaxed max-w-xl">
-              Your perfect blend of artisan coffee and tech-savvy workspace. 
-              Code, create, and connect in a cozy atmosphere designed for developers and coffee enthusiasts.
-            </p>
-            
-            <div class="flex flex-wrap gap-4">
-              <button class="px-8 py-4 bg-gradient-to-r from-coffee-500 to-coffee-600 hover:from-coffee-600 hover:to-coffee-700 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                <i class="fas fa-mug-hot mr-2"></i>
-                Order Now
-              </button>
-              <button class="px-8 py-4 backdrop-blur-lg bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-full font-semibold transition-all duration-300">
-                <i class="fas fa-compass mr-2"></i>
-                Explore Menu
-              </button>
-            </div>
-          </div>
-          
-          <!-- Right Content - Feature Cards -->
-          <div class="grid grid-cols-2 gap-4 z-10">
-            <div
-              v-for="(feature, index) in features"
-              :key="index"
-              class="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            >
-              <div class="text-coffee-300 text-3xl mb-3">
-                <i :class="`fas ${feature.icon}`"></i>
-              </div>
-              <h3 class="text-white font-semibold text-lg mb-2">{{ feature.title }}</h3>
-              <p class="text-coffee-200 text-sm">{{ feature.description }}</p>
-            </div>
-          </div>
+    <section id="home" class="relative min-h-screen flex items-center justify-center px-4">
+      <div class="text-center z-10">
+        <!-- Main Title -->
+        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-coffee-300 via-coffee-200 to-tech-blue-400 leading-tight tracking-tight animate-pulse-slow">
+          Santai Kuppi
+        </h1>
+        
+        <!-- Coffee Icon Accent -->
+        <div class="mt-8 text-coffee-300 text-5xl md:text-6xl opacity-80">
+          <i class="fas fa-coffee"></i>
         </div>
       </div>
     </section>
@@ -135,5 +72,23 @@ const features = [
 </template>
 
 <style scoped>
-/* Any additional custom styles can go here */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Respect user's motion preferences for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse-slow {
+    animation: none;
+  }
+}
 </style>
