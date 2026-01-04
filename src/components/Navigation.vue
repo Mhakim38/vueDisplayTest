@@ -20,7 +20,7 @@ const toggleMobileMenu = () => {
   <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4 md:px-8">
     <div class="max-w-7xl mx-auto">
       <!-- Glassy pill navigation -->
-      <div class="backdrop-blur-lg bg-white/10 border border-white/20 rounded-full px-6 py-3 shadow-2xl">
+      <div class="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl px-6 py-3 shadow-2xl">
         <div class="flex items-center justify-between">
           <!-- Logo -->
           <div class="flex items-center space-x-2">
