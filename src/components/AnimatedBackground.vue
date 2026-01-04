@@ -1,11 +1,12 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
+const PARTICLE_COUNT = 30
 const particles = ref([])
 
 onMounted(() => {
   // Create animated particles for coffee/tech ambiance
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
     particles.value.push({
       id: i,
       left: Math.random() * 100,
