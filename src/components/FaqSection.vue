@@ -26,21 +26,6 @@ const faqs = [
     question: 'Can you help with SEO and getting found online?',
     answer: 'Absolutely! All websites I build follow SEO best practices including semantic HTML, optimized meta tags, fast loading times, and mobile responsiveness. I can also provide additional SEO consulting if needed.',
     open: false
-  },
-  {
-    question: 'What technologies do you work with?',
-    answer: 'I specialize in modern web technologies including Vue.js, React, Next.js, Tailwind CSS, Node.js, and more. I choose the best tech stack for each project based on your specific requirements.',
-    open: false
-  },
-  {
-    question: 'Do you work with clients remotely?',
-    answer: 'Yes! I work with clients worldwide. Communication is done through video calls, email, and project management tools. Distance is never a barrier to delivering excellent results.',
-    open: false
-  },
-  {
-    question: 'What is the cost of a website?',
-    answer: 'Pricing varies based on scope, features, and timeline. Portfolio sites start around $1,500, while custom web applications start at $5,000. Contact me for a personalized quote based on your needs.',
-    open: false
   }
 ]
 

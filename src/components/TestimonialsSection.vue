@@ -1,4 +1,20 @@
 <script setup>
+import { ref } from 'vue'
+
+const currentSlide = ref(0)
+
+const nextSlide = () => {
+  currentSlide.value = (currentSlide.value + 1) % testimonials.length
+}
+
+const prevSlide = () => {
+  currentSlide.value = (currentSlide.value - 1 + testimonials.length) % testimonials.length
+}
+
+const goToSlide = (index) => {
+  currentSlide.value = index
+}
+
 const testimonials = [
   {
     name: 'Sarah Johnson',
@@ -59,47 +75,84 @@ const testimonials = [
         <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
           Client Testimonials
         </h2>
-        <p class="text-lg sm:text-xl text-coffee-300 max-w-2xl mx-auto">
+        <p class="text-lg sm:text-xl text-coffee-300 max-w-2xl mx-auto mb-6">
           Don't just take my word for it - hear what my clients have to say about their experience
         </p>
+        <!-- Customer Satisfaction Stat -->
+        <div class="inline-flex items-center gap-3 px-6 py-3 backdrop-blur-lg bg-tech-blue-500/20 border border-tech-blue-400/50 rounded-full">
+          <i class="fas fa-heart text-red-400 text-2xl"></i>
+          <div class="text-left">
+            <div class="text-3xl font-bold text-white">98%</div>
+            <div class="text-sm text-tech-blue-300">Customer Satisfaction</div>
+          </div>
+        </div>
       </div>
 
-      <!-- Testimonials Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div 
-          v-for="(testimonial, index) in testimonials" 
-          :key="index"
-          class="reveal-element backdrop-blur-lg bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-tech-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-tech-blue-500/20 flex flex-col"
-        >
-          <!-- Rating Stars -->
-          <div class="flex gap-1 mb-4">
-            <i 
-              v-for="star in testimonial.rating" 
-              :key="star"
-              class="fas fa-star text-yellow-400"
-            ></i>
-          </div>
+      <!-- Testimonials Carousel -->
+      <div class="max-w-4xl mx-auto relative">
+        <div class="reveal-element backdrop-blur-lg bg-white/5 border border-white/10 rounded-2xl p-8 md:p-12">
+          <!-- Testimonial Content -->
+          <div class="text-center">
+            <!-- Rating Stars -->
+            <div class="flex justify-center gap-1 mb-6">
+              <i 
+                v-for="star in testimonials[currentSlide].rating" 
+                :key="star"
+                class="fas fa-star text-yellow-400 text-xl"
+              ></i>
+            </div>
 
-          <!-- Testimonial Text -->
-          <p class="text-coffee-200 leading-relaxed mb-6 flex-grow italic">
-            "{{ testimonial.text }}"
-          </p>
+            <!-- Testimonial Text -->
+            <p class="text-coffee-200 text-lg md:text-xl leading-relaxed mb-8 italic">
+              "{{ testimonials[currentSlide].text }}"
+            </p>
 
-          <!-- Client Info -->
-          <div class="flex items-center gap-4 pt-4 border-t border-white/10">
-            <img 
-              :src="testimonial.image" 
-              :alt="testimonial.name"
-              class="w-12 h-12 rounded-full object-cover border-2 border-tech-blue-400/50"
-              loading="lazy"
-            />
-            <div>
-              <div class="text-white font-semibold">{{ testimonial.name }}</div>
-              <div class="text-coffee-400 text-sm">{{ testimonial.role }}</div>
-              <div class="text-tech-blue-400 text-xs">{{ testimonial.company }}</div>
+            <!-- Client Info -->
+            <div class="flex items-center justify-center gap-4 mb-8">
+              <img 
+                :src="testimonials[currentSlide].image" 
+                :alt="testimonials[currentSlide].name"
+                class="w-16 h-16 rounded-full object-cover border-2 border-tech-blue-400/50"
+                loading="lazy"
+              />
+              <div class="text-left">
+                <div class="text-white font-semibold text-lg">{{ testimonials[currentSlide].name }}</div>
+                <div class="text-coffee-400">{{ testimonials[currentSlide].role }}</div>
+                <div class="text-tech-blue-400 text-sm">{{ testimonials[currentSlide].company }}</div>
+              </div>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="flex justify-center gap-2">
+              <button
+                v-for="(testimonial, index) in testimonials"
+                :key="index"
+                @click="goToSlide(index)"
+                :class="[
+                  'w-3 h-3 rounded-full transition-all duration-300',
+                  currentSlide === index ? 'bg-tech-blue-400 w-8' : 'bg-white/30 hover:bg-white/50'
+                ]"
+                :aria-label="`Go to testimonial ${index + 1}`"
+              ></button>
             </div>
           </div>
         </div>
+
+        <!-- Navigation Arrows -->
+        <button
+          @click="prevSlide"
+          class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 rounded-full backdrop-blur-lg bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
+          aria-label="Previous testimonial"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button
+          @click="nextSlide"
+          class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 rounded-full backdrop-blur-lg bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
+          aria-label="Next testimonial"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
       </div>
 
       <!-- Call to Action -->

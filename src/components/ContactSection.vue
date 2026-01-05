@@ -46,8 +46,8 @@ const handleSubmit = async () => {
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Contact Form -->
+      <!-- Contact Form -->
+      <div class="max-w-2xl mx-auto">
         <div class="reveal-element backdrop-blur-lg bg-white/5 border border-white/10 rounded-2xl p-8">
           <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
           
@@ -132,89 +132,6 @@ const handleSubmit = async () => {
               </div>
             </transition>
           </form>
-        </div>
-
-        <!-- Contact Information -->
-        <div class="space-y-8">
-          <!-- Contact Details -->
-          <div class="reveal-element backdrop-blur-lg bg-white/5 border border-white/10 rounded-2xl p-8">
-            <h3 class="text-2xl font-bold text-white mb-6">Contact Information</h3>
-            
-            <div class="space-y-6">
-              <!-- Email -->
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded-full bg-tech-blue-500/20 flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-envelope text-tech-blue-400 text-xl"></i>
-                </div>
-                <div>
-                  <div class="text-coffee-200 text-sm mb-1">Email</div>
-                  <a href="mailto:hello@santaikuppi.com" class="text-white font-semibold hover:text-tech-blue-300 transition-colors">
-                    hello@santaikuppi.com
-                  </a>
-                </div>
-              </div>
-
-              <!-- Phone -->
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded-full bg-tech-blue-500/20 flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-phone text-tech-blue-400 text-xl"></i>
-                </div>
-                <div>
-                  <div class="text-coffee-200 text-sm mb-1">Phone</div>
-                  <a href="tel:+1234567890" class="text-white font-semibold hover:text-tech-blue-300 transition-colors">
-                    +1 (234) 567-890
-                  </a>
-                </div>
-              </div>
-
-              <!-- Location -->
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 rounded-full bg-tech-blue-500/20 flex items-center justify-center flex-shrink-0">
-                  <i class="fas fa-map-marker-alt text-tech-blue-400 text-xl"></i>
-                </div>
-                <div>
-                  <div class="text-coffee-200 text-sm mb-1">Location</div>
-                  <div class="text-white font-semibold">Remote / Worldwide</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Social Links -->
-          <div class="reveal-element backdrop-blur-lg bg-white/5 border border-white/10 rounded-2xl p-8">
-            <h3 class="text-2xl font-bold text-white mb-6">Connect With Me</h3>
-            
-            <div class="flex gap-4">
-              <a 
-                href="#" 
-                class="w-12 h-12 rounded-full bg-tech-blue-500/20 flex items-center justify-center text-tech-blue-400 hover:bg-tech-blue-500 hover:text-white transition-all duration-300 hover:scale-110"
-                aria-label="LinkedIn"
-              >
-                <i class="fab fa-linkedin-in text-xl"></i>
-              </a>
-              <a 
-                href="#" 
-                class="w-12 h-12 rounded-full bg-tech-blue-500/20 flex items-center justify-center text-tech-blue-400 hover:bg-tech-blue-500 hover:text-white transition-all duration-300 hover:scale-110"
-                aria-label="GitHub"
-              >
-                <i class="fab fa-github text-xl"></i>
-              </a>
-              <a 
-                href="#" 
-                class="w-12 h-12 rounded-full bg-tech-blue-500/20 flex items-center justify-center text-tech-blue-400 hover:bg-tech-blue-500 hover:text-white transition-all duration-300 hover:scale-110"
-                aria-label="Twitter"
-              >
-                <i class="fab fa-twitter text-xl"></i>
-              </a>
-              <a 
-                href="#" 
-                class="w-12 h-12 rounded-full bg-tech-blue-500/20 flex items-center justify-center text-tech-blue-400 hover:bg-tech-blue-500 hover:text-white transition-all duration-300 hover:scale-110"
-                aria-label="Instagram"
-              >
-                <i class="fab fa-instagram text-xl"></i>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </div>

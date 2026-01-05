@@ -53,10 +53,10 @@ const services = [
           :key="index"
           class="group reveal-element backdrop-blur-lg bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-tech-blue-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-tech-blue-500/20"
         >
-          <!-- Icon -->
+          <!-- Number -->
           <div class="mb-6">
-            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-tech-blue-500 to-tech-blue-600 text-white text-2xl group-hover:scale-110 transition-transform duration-300">
-              <i :class="`fas ${service.icon}`"></i>
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-tech-blue-500 to-tech-blue-600 text-white text-3xl font-bold group-hover:scale-110 transition-transform duration-300">
+              {{ index + 1 }}
             </div>
           </div>
 
