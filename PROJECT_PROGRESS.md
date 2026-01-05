@@ -160,13 +160,12 @@ A minimalist portfolio website for a web developer who provides solutions for cl
 - CTA to start new project
 
 ✅ **Testimonials Section (TestimonialsSection.vue)**
-- Interactive carousel for client testimonials
+- Hybrid layout: Grid view on desktop, carousel on mobile
 - 6 testimonials with 5-star ratings
-- Customer satisfaction metric (98%) displayed prominently
-- Navigation arrows and dot indicators
+- Desktop: 3-column grid layout with hover effects
+- Mobile: Interactive carousel with navigation arrows and dots
 - Avatar images with client name, role, and company
-- Smooth slide transitions
-- Fully responsive carousel layout
+- Smooth transitions and responsive design
 
 ✅ **FAQ Section (FaqSection.vue)**
 - 5 most frequently asked questions

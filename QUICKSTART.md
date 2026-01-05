@@ -27,7 +27,7 @@ The site will be available at `http://localhost:5173`
 1. **Hero Section** - Professional introduction with CTAs
 2. **Services Section** - "What I Can Do For You" with 6 service offerings
 3. **Projects Gallery** - Showcase of past work with images
-4. **Testimonials** - Interactive carousel with client feedback and 98% satisfaction rate
+4. **Testimonials** - Client feedback (grid on desktop, carousel on mobile)
 5. **FAQ** - Accordion-style frequently asked questions (5 questions)
 6. **Contact** - Form and contact information
 7. **Footer** - Complete footer with links and social media
