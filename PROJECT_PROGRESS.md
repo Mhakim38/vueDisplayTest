@@ -121,7 +121,9 @@ A minimalist portfolio website for a web developer who provides solutions for cl
 ✅ **Navigation Component**
 - Updated navigation menu items for portfolio sections
 - Changed icon from coffee to code
-- Maintained responsive mobile menu
+- Maintained responsive mobile menu with glassy morphism
+- Added smooth top-to-bottom slide transition for mobile dropdown
+- Mobile menu has transparent background with blur effect
 - Added smooth scroll links to all sections
 
 ✅ **Hero Section (HeroPage.vue)**

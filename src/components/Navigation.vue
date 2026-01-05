@@ -53,24 +53,26 @@ const toggleMobileMenu = () => {
 
         <!-- Mobile Navigation (dropdown) -->
         <transition
-          enter-active-class="transition duration-200 ease-out"
-          enter-from-class="opacity-0 scale-95"
-          enter-to-class="opacity-100 scale-100"
-          leave-active-class="transition duration-150 ease-in"
-          leave-from-class="opacity-100 scale-100"
-          leave-to-class="opacity-0 scale-95"
+          enter-active-class="transition-all duration-300 ease-out"
+          enter-from-class="opacity-0 -translate-y-2"
+          enter-to-class="opacity-100 translate-y-0"
+          leave-active-class="transition-all duration-200 ease-in"
+          leave-from-class="opacity-100 translate-y-0"
+          leave-to-class="opacity-0 -translate-y-2"
         >
-          <div v-if="mobileMenuOpen" class="md:hidden mt-4 space-y-2">
-            <a
-              v-for="item in navItems"
-              :key="item.name"
-              :href="item.href"
-              @click="mobileMenuOpen = false"
-              class="block px-4 py-3 rounded-2xl text-coffee-100 hover:bg-white/20 hover:text-white transition-all duration-300"
-            >
-              <i :class="`fas ${item.icon} mr-3`"></i>
-              <span class="font-medium">{{ item.name }}</span>
-            </a>
+          <div v-if="mobileMenuOpen" class="md:hidden mt-4">
+            <div class="space-y-2">
+              <a
+                v-for="item in navItems"
+                :key="item.name"
+                :href="item.href"
+                @click="mobileMenuOpen = false"
+                class="block px-4 py-3 text-coffee-100 hover:text-white transition-all duration-300"
+              >
+                <i :class="`fas ${item.icon} mr-3`"></i>
+                <span class="font-medium">{{ item.name }}</span>
+              </a>
+            </div>
           </div>
         </transition>
       </div>

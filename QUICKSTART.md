@@ -102,7 +102,7 @@ All sections are fully responsive with breakpoints:
 - `md:` 768px and up
 - `lg:` 1024px and up
 
-Navigation includes a mobile hamburger menu that transforms on smaller screens.
+Navigation includes a mobile hamburger menu that transforms on smaller screens with a smooth slide-down animation and transparent glassy backdrop.
 
 ---
 
