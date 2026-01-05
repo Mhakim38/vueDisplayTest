@@ -63,11 +63,12 @@ const toggleMobileMenu = () => {
           <div v-if="mobileMenuOpen" class="md:hidden mt-4">
             <div class="space-y-2">
               <a
-                v-for="item in navItems"
+                v-for="(item, index) in navItems"
                 :key="item.name"
                 :href="item.href"
                 @click="mobileMenuOpen = false"
-                class="block px-4 py-3 text-coffee-100 hover:text-white transition-all duration-300"
+                class="block px-4 py-3 text-coffee-100 hover:text-white transition-all duration-300 menu-item-stagger"
+                :style="{ animationDelay: `${index * 50}ms` }"
               >
                 <i :class="`fas ${item.icon} mr-3`"></i>
                 <span class="font-medium">{{ item.name }}</span>
@@ -81,5 +82,27 @@ const toggleMobileMenu = () => {
 </template>
 
 <style scoped>
-/* Additional styling if needed */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-item-stagger {
+  animation: slideInFromTop 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .menu-item-stagger {
+    animation: none;
+    opacity: 1;
+  }
+}
 </style>

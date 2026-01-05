@@ -123,6 +123,11 @@ Navigation includes a mobile hamburger menu that transforms on smaller screens w
 - Hero section has staggered fade-in
 - Smooth transitions throughout
 
+### Mobile Menu
+- Smooth slide-down animation when expanded
+- Menu items cascade in with 50ms staggered delay
+- Synced animation between navbar expansion and items appearing
+
 ---
 
 ## 🔍 SEO Features

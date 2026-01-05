@@ -124,6 +124,8 @@ A minimalist portfolio website for a web developer who provides solutions for cl
 - Maintained responsive mobile menu with glassy morphism
 - Added smooth top-to-bottom slide transition for mobile dropdown
 - Mobile menu has transparent background with blur effect
+- Added staggered animation for menu items (50ms delay per item)
+- Menu items cascade in smoothly when navbar expands
 - Added smooth scroll links to all sections
 
 ✅ **Hero Section (HeroPage.vue)**
@@ -263,6 +265,13 @@ A minimalist portfolio website for a web developer who provides solutions for cl
 - All animations will respect `prefers-reduced-motion` for accessibility
 - Using Vue 3 Composition API (script setup)
 - No external animation libraries needed - CSS + Vue transitions sufficient
+
+## Git Workflow
+- Each **task** (feature/fix) should be committed separately
+- Use descriptive commit messages
+- Commits should represent logical units of work
+- Multiple prompts may be part of one task - commit when task is complete
+- Format: `git add . && git commit -m "Your descriptive message here"`
 
 ---
 
