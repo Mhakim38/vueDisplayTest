@@ -1,94 +1,89 @@
 <script setup>
-// Simplified hero component that displays only the company title with visual appeal
+// Professional web developer portfolio hero section
 </script>
 
 <template>
-  <div class="relative min-h-screen">
-    <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center px-4">
-      <div class="text-center z-10">
-        <!-- Main Title -->
-        <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-coffee-300 via-coffee-200 to-tech-blue-400 leading-tight tracking-tight animate-pulse-slow">
+  <section id="home" class="relative min-h-screen flex items-center justify-center px-4 pt-20">
+    <div class="max-w-5xl mx-auto text-center z-10">
+      <!-- Main Headline -->
+      <div class="mb-6 animate-fade-in-up">
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-tech-blue-400 via-coffee-200 to-tech-blue-300 leading-tight mb-4">
           Santai Kuppi
         </h1>
-        
-        <!-- Coffee Icon Accent -->
-        <div class="mt-8 text-coffee-300 text-5xl md:text-6xl opacity-80">
-          <i class="fas fa-coffee"></i>
+        <div class="text-xl sm:text-2xl md:text-3xl text-coffee-200 font-light tracking-wide">
+          Web Developer & Portfolio Solutions
         </div>
       </div>
-    </section>
 
-    <!-- Additional Sections (Placeholders for future content) -->
-    <section id="menu" class="relative min-h-screen flex items-center justify-center px-4">
-      <div class="text-center z-10">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Our Menu</h2>
-        <p class="text-coffee-200 text-xl">Coming soon...</p>
-      </div>
-    </section>
+      <!-- Value Proposition -->
+      <p class="text-lg sm:text-xl md:text-2xl text-coffee-300 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-up-delay-1">
+        Transforming your ideas into stunning, functional websites. 
+        I specialize in creating custom solutions and portfolio websites that make you stand out.
+      </p>
 
-    <section id="workspace" class="relative min-h-screen flex items-center justify-center px-4">
-      <div class="text-center z-10">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Code Space</h2>
-        <p class="text-coffee-200 text-xl">Perfect workspace for developers...</p>
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up-delay-2">
+        <a 
+          href="#projects" 
+          class="group px-8 py-4 bg-gradient-to-r from-tech-blue-500 to-tech-blue-600 text-white rounded-full font-semibold shadow-lg hover:shadow-tech-blue-500/50 hover:scale-105 transition-all duration-300 flex items-center gap-2"
+        >
+          View My Work
+          <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a 
+          href="#contact" 
+          class="px-8 py-4 backdrop-blur-lg bg-white/10 border-2 border-white/30 text-white rounded-full font-semibold hover:bg-white/20 hover:scale-105 transition-all duration-300"
+        >
+          Get In Touch
+        </a>
       </div>
-    </section>
 
-    <section id="about" class="relative min-h-screen flex items-center justify-center px-4">
-      <div class="text-center z-10 max-w-3xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">About Santai Kuppi</h2>
-        <p class="text-coffee-200 text-lg leading-relaxed mb-6">
-          Santai Kuppi is more than just a coffee shop. It's a community hub where developers, 
-          designers, and creative minds come together to work, collaborate, and enjoy exceptional coffee.
-        </p>
-        <p class="text-coffee-200 text-lg leading-relaxed">
-          With high-speed internet, comfortable seating, and a carefully curated menu, 
-          we provide the perfect environment for your next big project.
-        </p>
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#services" class="flex flex-col items-center text-coffee-300 hover:text-coffee-200 transition-colors">
+          <span class="text-sm mb-2">Scroll to explore</span>
+          <i class="fas fa-chevron-down text-xl"></i>
+        </a>
       </div>
-    </section>
-
-    <section id="contact" class="relative min-h-screen flex items-center justify-center px-4">
-      <div class="text-center z-10">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Get in Touch</h2>
-        <p class="text-coffee-200 text-xl mb-8">Visit us or reach out online</p>
-        <div class="flex justify-center gap-6 text-3xl">
-          <a href="#" class="text-coffee-300 hover:text-coffee-200 transition-colors">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="#" class="text-coffee-300 hover:text-coffee-200 transition-colors">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="text-coffee-300 hover:text-coffee-200 transition-colors">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="text-coffee-300 hover:text-coffee-200 transition-colors">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-@keyframes pulse-slow {
-  0%, 100% {
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
     opacity: 1;
-  }
-  50% {
-    opacity: 0.9;
+    transform: translateY(0);
   }
 }
 
-.animate-pulse-slow {
-  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Respect user's motion preferences for accessibility */
+.animate-fade-in-up-delay-1 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+.animate-fade-in-up-delay-2 {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+/* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  .animate-pulse-slow {
+  .animate-fade-in-up,
+  .animate-fade-in-up-delay-1,
+  .animate-fade-in-up-delay-2,
+  .animate-bounce {
     animation: none;
+    opacity: 1;
+    transform: none;
   }
 }
 </style>

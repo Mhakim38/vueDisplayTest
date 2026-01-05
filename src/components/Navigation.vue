@@ -3,9 +3,10 @@ import { ref } from 'vue'
 
 const navItems = [
   { name: 'Home', icon: 'fa-home', href: '#home' },
-  { name: 'Menu', icon: 'fa-mug-hot', href: '#menu' },
-  { name: 'Code Space', icon: 'fa-laptop-code', href: '#workspace' },
-  { name: 'About', icon: 'fa-info-circle', href: '#about' },
+  { name: 'Services', icon: 'fa-briefcase', href: '#services' },
+  { name: 'Projects', icon: 'fa-folder-open', href: '#projects' },
+  { name: 'Testimonials', icon: 'fa-star', href: '#testimonials' },
+  { name: 'FAQ', icon: 'fa-question-circle', href: '#faq' },
   { name: 'Contact', icon: 'fa-envelope', href: '#contact' },
 ]
 
@@ -24,7 +25,7 @@ const toggleMobileMenu = () => {
         <div class="flex items-center justify-between">
           <!-- Logo -->
           <div class="flex items-center space-x-2">
-            <i class="fas fa-coffee text-coffee-300 text-2xl"></i>
+            <i class="fas fa-code text-tech-blue-400 text-2xl"></i>
             <span class="text-white font-bold text-xl hidden sm:inline">Santai Kuppi</span>
           </div>
 
